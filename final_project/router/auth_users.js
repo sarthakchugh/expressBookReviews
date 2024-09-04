@@ -85,7 +85,7 @@ regd_users.delete('/auth/review/:isbn', (req, res) => {
 
 	books[isbn].reviews[userName] = undefined;
 	res
-		.status(201)
+		.status(200)
 		.json({ message: `Reviews for book with ISBN: ${isbn} by the user ${userName} has been deleted.` });
 });
 
